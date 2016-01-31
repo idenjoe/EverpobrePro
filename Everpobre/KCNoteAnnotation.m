@@ -10,7 +10,7 @@
 #import "KCLocation.h"
 
 @interface KCNoteAnnotation ()
-@property (nonatomic, strong) KCGNote *model;
+
 @end
 
 

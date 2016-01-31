@@ -118,9 +118,10 @@
     
     UITabBarController *tabController = [UITabBarController new];
     
-    UINavigationController *navVC = [tVC wrappedInNavigation];
+    UINavigationController *nav1VC = [tVC wrappedInNavigation];
+    UINavigationController *nav2VC = [mapVC wrappedInNavigation];
     
-    [tabController setViewControllers:@[navVC,mapVC]];
+    [tabController setViewControllers:@[nav1VC,nav2VC]];
 
     self.window.rootViewController = tabController;
     

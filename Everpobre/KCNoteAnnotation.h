@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "KCGNote.h"
 @interface KCNoteAnnotation : NSObject <MKAnnotation>
+@property (nonatomic, strong) KCGNote *model;
 
 -(instancetype)initWithModel:(KCGNote *)model;
 
