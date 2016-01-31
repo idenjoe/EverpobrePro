@@ -20,6 +20,9 @@
 		73C6451B1C5E92D900F20C5D /* KCMapNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C645191C5E92D900F20C5D /* KCMapNotesViewController.m */; };
 		73C6451C1C5E92D900F20C5D /* KCMapNotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C6451A1C5E92D900F20C5D /* KCMapNotesViewController.xib */; };
 		73C6451F1C5EA57300F20C5D /* KCPinAnnotationview.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C6451E1C5EA57300F20C5D /* KCPinAnnotationview.m */; };
+		73C645231C5EAB8000F20C5D /* KCNotebookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C645211C5EAB8000F20C5D /* KCNotebookTableViewCell.m */; };
+		73C645241C5EAB8000F20C5D /* KCNotebookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C645221C5EAB8000F20C5D /* KCNotebookTableViewCell.xib */; };
+		73C645261C5EABEA00F20C5D /* everNote.png in Resources */ = {isa = PBXBuildFile; fileRef = 73C645251C5EABEA00F20C5D /* everNote.png */; };
 		73E6AD231C5E2FA900A049F1 /* _KCLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E6AD221C5E2FA900A049F1 /* _KCLocation.m */; };
 		73E6AD261C5E2FB200A049F1 /* KCLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E6AD251C5E2FB200A049F1 /* KCLocation.m */; };
 		73E6AD311C5E59CE00A049F1 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E6AD2C1C5E59CE00A049F1 /* UIImage+Alpha.m */; };
@@ -80,6 +83,10 @@
 		73C6451A1C5E92D900F20C5D /* KCMapNotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KCMapNotesViewController.xib; sourceTree = "<group>"; };
 		73C6451D1C5EA57300F20C5D /* KCPinAnnotationview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCPinAnnotationview.h; sourceTree = "<group>"; };
 		73C6451E1C5EA57300F20C5D /* KCPinAnnotationview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCPinAnnotationview.m; sourceTree = "<group>"; };
+		73C645201C5EAB8000F20C5D /* KCNotebookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCNotebookTableViewCell.h; sourceTree = "<group>"; };
+		73C645211C5EAB8000F20C5D /* KCNotebookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCNotebookTableViewCell.m; sourceTree = "<group>"; };
+		73C645221C5EAB8000F20C5D /* KCNotebookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KCNotebookTableViewCell.xib; sourceTree = "<group>"; };
+		73C645251C5EABEA00F20C5D /* everNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = everNote.png; sourceTree = "<group>"; };
 		73E6AD211C5E2FA900A049F1 /* _KCLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _KCLocation.h; sourceTree = "<group>"; };
 		73E6AD221C5E2FA900A049F1 /* _KCLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _KCLocation.m; sourceTree = "<group>"; };
 		73E6AD241C5E2FB200A049F1 /* KCLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLocation.h; sourceTree = "<group>"; };
@@ -162,6 +169,9 @@
 				73B2DC301C5E77930097632C /* KCGNoteCellView.m */,
 				73C6451D1C5EA57300F20C5D /* KCPinAnnotationview.h */,
 				73C6451E1C5EA57300F20C5D /* KCPinAnnotationview.m */,
+				73C645201C5EAB8000F20C5D /* KCNotebookTableViewCell.h */,
+				73C645211C5EAB8000F20C5D /* KCNotebookTableViewCell.m */,
+				73C645221C5EAB8000F20C5D /* KCNotebookTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -169,6 +179,7 @@
 		73B2DC361C5E7C290097632C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				73C645251C5EABEA00F20C5D /* everNote.png */,
 				73B2DC371C5E7C350097632C /* noSnapshot.png */,
 				73B2DC381C5E7C350097632C /* placemark.png */,
 				73C645091C5E825100F20C5D /* noImage.png */,
@@ -418,8 +429,10 @@
 				EDF05E601C52CD1600F501A3 /* no-image-available.png in Resources */,
 				ED9204401C483A1E0023E48D /* LaunchScreen.storyboard in Resources */,
 				EDF05E5E1C52CBC300F501A3 /* KCGPhotoViewController.xib in Resources */,
+				73C645241C5EAB8000F20C5D /* KCNotebookTableViewCell.xib in Resources */,
 				ED92043D1C483A1E0023E48D /* Assets.xcassets in Resources */,
 				73B2DC391C5E7C350097632C /* noSnapshot.png in Resources */,
+				73C645261C5EABEA00F20C5D /* everNote.png in Resources */,
 				73B2DC351C5E7BA80097632C /* KCGNoteCollectionViewCell.xib in Resources */,
 				ED37F8971C519492003DA142 /* KCGNoteViewController.xib in Resources */,
 				73C6450A1C5E825100F20C5D /* noImage.png in Resources */,
@@ -451,6 +464,7 @@
 				ED37F8961C519492003DA142 /* KCGNoteViewController.m in Sources */,
 				EDE068371C4DA0DD00EAB461 /* KCGNotebooksViewController.m in Sources */,
 				ED9204351C483A1E0023E48D /* AppDelegate.m in Sources */,
+				73C645231C5EAB8000F20C5D /* KCNotebookTableViewCell.m in Sources */,
 				ED92045F1C4840DD0023E48D /* Everpobre.xcdatamodeld in Sources */,
 				73E6AD231C5E2FA900A049F1 /* _KCLocation.m in Sources */,
 				73E6AD321C5E59CE00A049F1 /* UIImage+Resize.m in Sources */,

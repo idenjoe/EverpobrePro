@@ -11,6 +11,7 @@
 #import "KCGNote.h"
 #import "KCGNotesViewController.h"
 #import "EverPobreNotesViewController.h"
+#import "KCNotebookTableViewCell.h"
 
 @interface KCGNotebooksViewController ()
 
@@ -20,6 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self registerNibs];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 160;
     self.title = @"Everpobre Pro";
     
     // Creamos botón de barra de +
@@ -27,6 +31,12 @@
     
     // Lo añadimos
     self.navigationItem.rightBarButtonItem = btn;
+}
+
+-(void)registerNibs{
+    UINib *nib = [UINib nibWithNibName:@"KCNotebookTableViewCell"
+                                bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"notebooksCell"];
 }
 
 -(void) addNewNotebook:(id) sender{
@@ -42,23 +52,19 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    static NSString *cellID = @"NotebookCell";
+    static NSString *cellID = @"notebooksCell";
     
     // Averiguar qué libreta es
     KCGNotebook *nb = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     // Crear la celda
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    KCNotebookTableViewCell *cell = (KCNotebookTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
     if (cell == nil) {
         // Creamos la celda de la nada
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+        cell = [[KCNotebookTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
     // Sincronizar libreta -> celda
-    cell.textLabel.text = nb.name;
-    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
-    fmt.dateStyle = NSDateFormatterShortStyle;
-    cell.detailTextLabel.text = [fmt stringFromDate:nb.modificationDate];
-    
+    cell.name.text = nb.name;
     
     // Devolvemos la celda
     return cell;
