@@ -43,19 +43,14 @@
     [super awakeFromInsert];
     // Se llama solo una vez
     [self setupKVO];
+    self.locationManager = [CLLocationManager new];
+    self.locationManager.delegate = self;
     
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
     
-    if ( (status == kCLAuthorizationStatusNotDetermined || status == kCLAuthorizationStatusAuthorizedWhenInUse) && [CLLocationManager locationServicesEnabled]) {
+    if ( status == kCLAuthorizationStatusAuthorizedWhenInUse && [CLLocationManager locationServicesEnabled]) {
         // Tenemos localización
-        self.locationManager = [CLLocationManager new];
-        self.locationManager.delegate = self;
-        
-        if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-            [self.locationManager requestWhenInUseAuthorization];
-        }
-        
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         [self.locationManager startUpdatingLocation];
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -63,6 +58,9 @@
         });
     }else{
         NSLog(@"No tengo permiso");
+        if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+            [self.locationManager requestWhenInUseAuthorization];
+        }
     }
     
 }

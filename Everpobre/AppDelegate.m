@@ -88,7 +88,7 @@
     }
     
     // Iniciamos el inspector del contexto
-//    [self printContextState];
+    [self printContextState];
     
     // Autosave
     if (AUTO_SAVE) {

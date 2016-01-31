@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73B2DC271C5E6C620097632C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B2DC261C5E6C620097632C /* MapKit.framework */; };
 		73E6AD231C5E2FA900A049F1 /* _KCLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E6AD221C5E2FA900A049F1 /* _KCLocation.m */; };
 		73E6AD261C5E2FB200A049F1 /* KCLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E6AD251C5E2FB200A049F1 /* KCLocation.m */; };
 		73E6AD311C5E59CE00A049F1 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E6AD2C1C5E59CE00A049F1 /* UIImage+Alpha.m */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		7362986B1C5E24EC00FABD9E /* Everpobre3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Everpobre3.xcdatamodel; sourceTree = "<group>"; };
+		73B2DC261C5E6C620097632C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		73E6AD211C5E2FA900A049F1 /* _KCLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _KCLocation.h; sourceTree = "<group>"; };
 		73E6AD221C5E2FA900A049F1 /* _KCLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _KCLocation.m; sourceTree = "<group>"; };
 		73E6AD241C5E2FB200A049F1 /* KCLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLocation.h; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73B2DC271C5E6C620097632C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +148,7 @@
 		ED9204241C483A1E0023E48D = {
 			isa = PBXGroup;
 			children = (
+				73B2DC261C5E6C620097632C /* MapKit.framework */,
 				ED92042F1C483A1E0023E48D /* Everpobre */,
 				ED9204491C483A1E0023E48D /* EverpobreTests */,
 				ED92042E1C483A1E0023E48D /* Products */,

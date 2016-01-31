@@ -132,6 +132,7 @@
             // Guardamos la nueva imagen
             UIImage *img = [UIImage imageWithCGImage:imageRef];
             self.photoView.image = img;
+            self.model.photo.image = img;
             
             //Liberar el CGImageRef
             CGImageRelease(imageRef);
