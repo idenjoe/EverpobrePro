@@ -15,8 +15,8 @@
     
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:[KCLocation entityName]];
-    NSPredicate *latitudePredicate = [NSPredicate predicateWithFormat:@"abs(latitude) - abs(%lf) < 0.001",location.coordinate.latitude];
-    NSPredicate *longitudePredicate = [NSPredicate predicateWithFormat:@"abs(longitude) - abs(%lf) < 0.001",location.coordinate.longitude];
+    NSPredicate *latitudePredicate = [NSPredicate predicateWithFormat:@"(abs(latitude) - abs(%lf)) < 0.001",location.coordinate.latitude];
+    NSPredicate *longitudePredicate = [NSPredicate predicateWithFormat:@"(abs(longitude) - abs(%lf)) < 0.001",location.coordinate.longitude];
     request.predicate = [NSCompoundPredicate andPredicateWithSubpredicates:@[latitudePredicate,longitudePredicate]];
     
     NSError *error = nil;

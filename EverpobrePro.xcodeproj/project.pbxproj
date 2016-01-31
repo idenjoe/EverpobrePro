@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		73B2DC271C5E6C620097632C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B2DC261C5E6C620097632C /* MapKit.framework */; };
+		73B2DC2C1C5E76D40097632C /* AGTCoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B2DC291C5E76D40097632C /* AGTCoreDataCollectionViewController.m */; };
+		73B2DC2D1C5E76D40097632C /* EverpobreNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B2DC2B1C5E76D40097632C /* EverpobreNotesViewController.m */; };
+		73B2DC311C5E77930097632C /* KCGNoteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B2DC301C5E77930097632C /* KCGNoteCellView.m */; };
+		73B2DC351C5E7BA80097632C /* KCGNoteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73B2DC341C5E7BA80097632C /* KCGNoteCollectionViewCell.xib */; };
+		73B2DC391C5E7C350097632C /* noSnapshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 73B2DC371C5E7C350097632C /* noSnapshot.png */; };
+		73B2DC3A1C5E7C350097632C /* placemark.png in Resources */ = {isa = PBXBuildFile; fileRef = 73B2DC381C5E7C350097632C /* placemark.png */; };
+		73C6450A1C5E825100F20C5D /* noImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 73C645091C5E825100F20C5D /* noImage.png */; };
+		73C6450C1C5E8B1E00F20C5D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C6450B1C5E8B1E00F20C5D /* CoreLocation.framework */; };
+		73C6450F1C5E8E3700F20C5D /* KCNoteAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C6450E1C5E8E3700F20C5D /* KCNoteAnnotation.m */; };
+		73C6451B1C5E92D900F20C5D /* KCMapNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C645191C5E92D900F20C5D /* KCMapNotesViewController.m */; };
+		73C6451C1C5E92D900F20C5D /* KCMapNotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C6451A1C5E92D900F20C5D /* KCMapNotesViewController.xib */; };
 		73E6AD231C5E2FA900A049F1 /* _KCLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E6AD221C5E2FA900A049F1 /* _KCLocation.m */; };
 		73E6AD261C5E2FB200A049F1 /* KCLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E6AD251C5E2FB200A049F1 /* KCLocation.m */; };
 		73E6AD311C5E59CE00A049F1 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E6AD2C1C5E59CE00A049F1 /* UIImage+Alpha.m */; };
@@ -50,6 +61,22 @@
 /* Begin PBXFileReference section */
 		7362986B1C5E24EC00FABD9E /* Everpobre3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Everpobre3.xcdatamodel; sourceTree = "<group>"; };
 		73B2DC261C5E6C620097632C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		73B2DC281C5E76D40097632C /* AGTCoreDataCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataCollectionViewController.h; sourceTree = "<group>"; };
+		73B2DC291C5E76D40097632C /* AGTCoreDataCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataCollectionViewController.m; sourceTree = "<group>"; };
+		73B2DC2A1C5E76D40097632C /* EverPobreNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EverPobreNotesViewController.h; sourceTree = "<group>"; };
+		73B2DC2B1C5E76D40097632C /* EverpobreNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EverpobreNotesViewController.m; sourceTree = "<group>"; };
+		73B2DC2F1C5E77930097632C /* KCGNoteCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCGNoteCellView.h; sourceTree = "<group>"; };
+		73B2DC301C5E77930097632C /* KCGNoteCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCGNoteCellView.m; sourceTree = "<group>"; };
+		73B2DC341C5E7BA80097632C /* KCGNoteCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KCGNoteCollectionViewCell.xib; sourceTree = "<group>"; };
+		73B2DC371C5E7C350097632C /* noSnapshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noSnapshot.png; sourceTree = "<group>"; };
+		73B2DC381C5E7C350097632C /* placemark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placemark.png; sourceTree = "<group>"; };
+		73C645091C5E825100F20C5D /* noImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noImage.png; sourceTree = "<group>"; };
+		73C6450B1C5E8B1E00F20C5D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		73C6450D1C5E8E3700F20C5D /* KCNoteAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCNoteAnnotation.h; sourceTree = "<group>"; };
+		73C6450E1C5E8E3700F20C5D /* KCNoteAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCNoteAnnotation.m; sourceTree = "<group>"; };
+		73C645181C5E92D900F20C5D /* KCMapNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCMapNotesViewController.h; sourceTree = "<group>"; };
+		73C645191C5E92D900F20C5D /* KCMapNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCMapNotesViewController.m; sourceTree = "<group>"; };
+		73C6451A1C5E92D900F20C5D /* KCMapNotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KCMapNotesViewController.xib; sourceTree = "<group>"; };
 		73E6AD211C5E2FA900A049F1 /* _KCLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _KCLocation.h; sourceTree = "<group>"; };
 		73E6AD221C5E2FA900A049F1 /* _KCLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _KCLocation.m; sourceTree = "<group>"; };
 		73E6AD241C5E2FB200A049F1 /* KCLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLocation.h; sourceTree = "<group>"; };
@@ -109,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73C6450C1C5E8B1E00F20C5D /* CoreLocation.framework in Frameworks */,
 				73B2DC271C5E6C620097632C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +151,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73B2DC2E1C5E778B0097632C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				73B2DC341C5E7BA80097632C /* KCGNoteCollectionViewCell.xib */,
+				73B2DC2F1C5E77930097632C /* KCGNoteCellView.h */,
+				73B2DC301C5E77930097632C /* KCGNoteCellView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		73B2DC361C5E7C290097632C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				73B2DC371C5E7C350097632C /* noSnapshot.png */,
+				73B2DC381C5E7C350097632C /* placemark.png */,
+				73C645091C5E825100F20C5D /* noImage.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		73E6AD291C5E59AE00A049F1 /* UIimage */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +196,7 @@
 		ED9204241C483A1E0023E48D = {
 			isa = PBXGroup;
 			children = (
+				73C6450B1C5E8B1E00F20C5D /* CoreLocation.framework */,
 				73B2DC261C5E6C620097632C /* MapKit.framework */,
 				ED92042F1C483A1E0023E48D /* Everpobre */,
 				ED9204491C483A1E0023E48D /* EverpobreTests */,
@@ -167,6 +216,8 @@
 		ED92042F1C483A1E0023E48D /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				73B2DC361C5E7C290097632C /* Resources */,
+				73B2DC2E1C5E778B0097632C /* Views */,
 				EDF05E5F1C52CD1600F501A3 /* no-image-available.png */,
 				EDE068381C4DA9C300EAB461 /* Categories */,
 				EDE068311C4D9FAC00EAB461 /* Controllers */,
@@ -237,6 +288,8 @@
 				ED9204691C485C070023E48D /* KCGNotebook.m */,
 				ED92046A1C485C070023E48D /* KCGPhoto.h */,
 				ED92046B1C485C070023E48D /* KCGPhoto.m */,
+				73C6450D1C5E8E3700F20C5D /* KCNoteAnnotation.h */,
+				73C6450E1C5E8E3700F20C5D /* KCNoteAnnotation.m */,
 			);
 			name = Human;
 			sourceTree = "<group>";
@@ -244,6 +297,10 @@
 		EDE068311C4D9FAC00EAB461 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				73B2DC281C5E76D40097632C /* AGTCoreDataCollectionViewController.h */,
+				73B2DC291C5E76D40097632C /* AGTCoreDataCollectionViewController.m */,
+				73B2DC2A1C5E76D40097632C /* EverPobreNotesViewController.h */,
+				73B2DC2B1C5E76D40097632C /* EverpobreNotesViewController.m */,
 				EDE068321C4D9FC500EAB461 /* AGTCoreDataTableViewController.h */,
 				EDE068331C4D9FC500EAB461 /* AGTCoreDataTableViewController.m */,
 				EDE068351C4DA0DD00EAB461 /* KCGNotebooksViewController.h */,
@@ -256,6 +313,9 @@
 				EDF05E5A1C52CBC300F501A3 /* KCGPhotoViewController.h */,
 				EDF05E5B1C52CBC300F501A3 /* KCGPhotoViewController.m */,
 				EDF05E5C1C52CBC300F501A3 /* KCGPhotoViewController.xib */,
+				73C645181C5E92D900F20C5D /* KCMapNotesViewController.h */,
+				73C645191C5E92D900F20C5D /* KCMapNotesViewController.m */,
+				73C6451A1C5E92D900F20C5D /* KCMapNotesViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -349,11 +409,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73B2DC3A1C5E7C350097632C /* placemark.png in Resources */,
 				EDF05E601C52CD1600F501A3 /* no-image-available.png in Resources */,
 				ED9204401C483A1E0023E48D /* LaunchScreen.storyboard in Resources */,
 				EDF05E5E1C52CBC300F501A3 /* KCGPhotoViewController.xib in Resources */,
 				ED92043D1C483A1E0023E48D /* Assets.xcassets in Resources */,
+				73B2DC391C5E7C350097632C /* noSnapshot.png in Resources */,
+				73B2DC351C5E7BA80097632C /* KCGNoteCollectionViewCell.xib in Resources */,
 				ED37F8971C519492003DA142 /* KCGNoteViewController.xib in Resources */,
+				73C6450A1C5E825100F20C5D /* noImage.png in Resources */,
+				73C6451C1C5E92D900F20C5D /* KCMapNotesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,9 +437,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED92046F1C485C070023E48D /* KCGNote.m in Sources */,
+				73B2DC2D1C5E76D40097632C /* EverpobreNotesViewController.m in Sources */,
+				73B2DC311C5E77930097632C /* KCGNoteCellView.m in Sources */,
 				EDF05E5D1C52CBC300F501A3 /* KCGPhotoViewController.m in Sources */,
 				EDE0683B1C4DAA0600EAB461 /* UIViewController+Navigation.m in Sources */,
 				EDE068341C4D9FC500EAB461 /* AGTCoreDataTableViewController.m in Sources */,
+				73C6450F1C5E8E3700F20C5D /* KCNoteAnnotation.m in Sources */,
 				ED37F8961C519492003DA142 /* KCGNoteViewController.m in Sources */,
 				EDE068371C4DA0DD00EAB461 /* KCGNotebooksViewController.m in Sources */,
 				ED9204351C483A1E0023E48D /* AppDelegate.m in Sources */,
@@ -385,7 +453,9 @@
 				ED92046D1C485C070023E48D /* _KCGNotebook.m in Sources */,
 				ED92046E1C485C070023E48D /* _KCGPhoto.m in Sources */,
 				ED9204711C485C070023E48D /* KCGPhoto.m in Sources */,
+				73B2DC2C1C5E76D40097632C /* AGTCoreDataCollectionViewController.m in Sources */,
 				ED9204701C485C070023E48D /* KCGNotebook.m in Sources */,
+				73C6451B1C5E92D900F20C5D /* KCMapNotesViewController.m in Sources */,
 				73E6AD261C5E2FB200A049F1 /* KCLocation.m in Sources */,
 				73E6AD331C5E59CE00A049F1 /* UIImage+RoundedCorner.m in Sources */,
 				ED92046C1C485C070023E48D /* _KCGNote.m in Sources */,

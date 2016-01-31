@@ -14,6 +14,8 @@
 #import "UIViewController+Navigation.h"
 #import "Settngs.h"
 #import "KCLocation.h"
+#import <MapKit/MapKit.h>
+#import "KCMapNotesViewController.h"
 
 @interface AppDelegate ()
 @property (strong, nonatomic) AGTCoreDataStack *model;
@@ -109,9 +111,18 @@
     NSFetchedResultsController *fc = [[NSFetchedResultsController alloc] initWithFetchRequest:r managedObjectContext:self.model.context sectionNameKeyPath:nil cacheName:nil];
     
     // El Controlador de tabla
-    KCGNotebooksViewController *tVC = [[KCGNotebooksViewController alloc]initWithFetchedResultsController:fc style:UITableViewStylePlain];
+    KCGNotebooksViewController *tVC = [[KCGNotebooksViewController alloc] initWithFetchedResultsController:fc style:UITableViewStylePlain];
     
-    self.window.rootViewController = [tVC wrappedInNavigation];
+    KCMapNotesViewController *mapVC = [[KCMapNotesViewController alloc] initWithModel:self.model];
+    
+    
+    UITabBarController *tabController = [UITabBarController new];
+    
+    UINavigationController *navVC = [tVC wrappedInNavigation];
+    
+    [tabController setViewControllers:@[navVC,mapVC]];
+
+    self.window.rootViewController = tabController;
     
     [self.window makeKeyAndVisible];
     

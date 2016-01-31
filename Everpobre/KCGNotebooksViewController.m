@@ -10,6 +10,7 @@
 #import "KCGNotebook.h"
 #import "KCGNote.h"
 #import "KCGNotesViewController.h"
+#import "EverPobreNotesViewController.h"
 
 @interface KCGNotebooksViewController ()
 
@@ -64,11 +65,6 @@
 }
 
 
-
-
-
-
-
 #pragma mark - Navigation
 -(void) tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -94,12 +90,20 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     // Crear el fetchedResults
     NSFetchedResultsController *fc = [[NSFetchedResultsController alloc] initWithFetchRequest:r managedObjectContext:nb.managedObjectContext sectionNameKeyPath:nil cacheName:[[NSUUID new]UUIDString]];
     
+    // layout
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    CGSize size = self.view.frame.size;
+    layout.minimumLineSpacing = 10;
+    layout.minimumInteritemSpacing = 10;
+    layout.itemSize = CGSizeMake((size.width/2) -30, 150);
+    layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     
-    // Crear el controlador
-    KCGNotesViewController *nVC = [[KCGNotesViewController alloc]
-                                   initWithFetchedResultsController:fc
-                                   style:UITableViewStylePlain
-                                   notebook:nb];
+    // View controller
+    EverpobreNotesViewController *nVC = [EverpobreNotesViewController coreDataCollectionViewControllerWithFetchedResultsController:fc
+                                                                                                               layout:layout];
+    
+    nVC.notebook = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     
     // Pushearlo

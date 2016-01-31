@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KCGNoteViewController">
@@ -20,23 +21,20 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="umZ-Fv-tAu">
-                    <rect key="frame" x="8" y="80" width="133" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umZ-Fv-tAu">
+                    <rect key="frame" x="8" y="80" width="160" height="20.5"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZY1-br-8NM">
-                    <rect key="frame" x="179" y="79" width="133" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZY1-br-8NM">
+                    <rect key="frame" x="152" y="80" width="160" height="20.5"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="jU3-im-ErQ">
-                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jU3-im-ErQ">
+                    <rect key="frame" x="0.0" y="480" width="320" height="44"/>
                     <items>
                         <barButtonItem title="Photo" id="J54-XZ-6mn">
                             <connections>
@@ -45,21 +43,38 @@
                         </barButtonItem>
                     </items>
                 </toolbar>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="u01-OJ-cTJ">
-                    <rect key="frame" x="8" y="158" width="304" height="358"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u01-OJ-cTJ">
+                    <rect key="frame" x="8" y="157.5" width="304" height="314.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escribe un nombre aquí." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="JUb-SF-Ko3">
-                    <rect key="frame" x="8" y="120" width="304" height="30"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escribe un nombre aquí." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JUb-SF-Ko3">
+                    <rect key="frame" x="8" y="119" width="304" height="30"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes" keyboardType="alphabet" returnKeyType="done"/>
                 </textField>
             </subviews>
             <color key="backgroundColor" white="0.93941380033557043" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="u01-OJ-cTJ" secondAttribute="trailing" constant="8" id="B04-eW-UQt"/>
+                <constraint firstItem="JUb-SF-Ko3" firstAttribute="top" secondItem="umZ-Fv-tAu" secondAttribute="bottom" constant="19" id="Deh-GK-7US"/>
+                <constraint firstAttribute="trailing" secondItem="ZY1-br-8NM" secondAttribute="trailing" constant="8" id="Djg-Gm-qfm"/>
+                <constraint firstItem="JUb-SF-Ko3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="EgZ-wV-5AV"/>
+                <constraint firstItem="u01-OJ-cTJ" firstAttribute="top" secondItem="JUb-SF-Ko3" secondAttribute="bottom" constant="8" id="HBV-Lz-l3q"/>
+                <constraint firstItem="umZ-Fv-tAu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="JXN-tD-UmO"/>
+                <constraint firstAttribute="bottom" secondItem="jU3-im-ErQ" secondAttribute="bottom" constant="44" id="KDW-6o-yko"/>
+                <constraint firstItem="u01-OJ-cTJ" firstAttribute="width" secondItem="JUb-SF-Ko3" secondAttribute="width" id="WnW-ID-drL"/>
+                <constraint firstAttribute="trailing" secondItem="jU3-im-ErQ" secondAttribute="trailing" id="YQd-Gs-uZS"/>
+                <constraint firstItem="jU3-im-ErQ" firstAttribute="top" secondItem="u01-OJ-cTJ" secondAttribute="bottom" constant="8" id="c8c-A0-iWd"/>
+                <constraint firstItem="umZ-Fv-tAu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="dtd-Vi-Djw"/>
+                <constraint firstItem="umZ-Fv-tAu" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="eho-sZ-x9H"/>
+                <constraint firstItem="ZY1-br-8NM" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="fkT-W8-6KF"/>
+                <constraint firstItem="jU3-im-ErQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="h9z-T3-vEr"/>
+                <constraint firstAttribute="trailing" secondItem="JUb-SF-Ko3" secondAttribute="trailing" constant="8" id="pcC-PO-ibt"/>
+                <constraint firstItem="u01-OJ-cTJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="qtn-mC-6Yg"/>
+                <constraint firstItem="ZY1-br-8NM" firstAttribute="centerY" secondItem="umZ-Fv-tAu" secondAttribute="centerY" id="yDl-u4-qa1"/>
+            </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <connections>
                 <action selector="removeKeyboard:" destination="-1" eventType="touchUpInside" id="fGs-tj-L3l"/>

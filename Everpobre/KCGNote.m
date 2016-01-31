@@ -103,7 +103,6 @@
                      ofObject:(id)object
                        change:(NSDictionary<NSString *,id> *)change
                       context:(void *)context{
-    
     self.modificationDate = [NSDate date];
 }
 
