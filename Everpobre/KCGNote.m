@@ -46,7 +46,7 @@
     
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
     
-    if ( (status == kCLAuthorizationStatusNotDetermined || status == kCLAuthorizationStatusAuthorizedAlways) && [CLLocationManager locationServicesEnabled]) {
+    if ( (status == kCLAuthorizationStatusNotDetermined || status == kCLAuthorizationStatusAuthorizedWhenInUse) && [CLLocationManager locationServicesEnabled]) {
         // Tenemos localización
         self.locationManager = [CLLocationManager new];
         self.locationManager.delegate = self;

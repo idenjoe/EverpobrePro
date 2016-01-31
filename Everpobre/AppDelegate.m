@@ -88,17 +88,12 @@
     }
     
     // Iniciamos el inspector del contexto
-    [self printContextState];
+//    [self printContextState];
     
     // Autosave
     if (AUTO_SAVE) {
         [self autoSave];
     }
-    
-    
-    
-
-
 
     // Creo la window y tal y cual
     self.window = [[UIWindow alloc] initWithFrame:
