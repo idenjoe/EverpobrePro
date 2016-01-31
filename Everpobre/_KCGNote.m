@@ -11,6 +11,7 @@ const struct KCGNoteAttributes KCGNoteAttributes = {
 };
 
 const struct KCGNoteRelationships KCGNoteRelationships = {
+	.location = @"location",
 	.notebook = @"notebook",
 	.photo = @"photo",
 };
@@ -51,6 +52,8 @@ const struct KCGNoteRelationships KCGNoteRelationships = {
 @dynamic name;
 
 @dynamic text;
+
+@dynamic location;
 
 @dynamic notebook;
 

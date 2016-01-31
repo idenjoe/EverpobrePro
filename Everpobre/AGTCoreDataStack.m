@@ -44,12 +44,13 @@
         _storeCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.model];
         
 
-        
+        NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption: @YES,
+                                  NSInferMappingModelAutomaticallyOption : @YES};
         NSError *err = nil;
         if (![_storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType
                                              configuration:nil
                                                        URL:self.dbURL
-                                                   options:nil
+                                                   options:options
                                                      error:&err ]) {
             // Something went really wrong...
             // Send a notification and return nil

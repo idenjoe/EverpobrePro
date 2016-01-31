@@ -1,17 +1,21 @@
 #import "KCGNote.h"
 #import "KCGPhoto.h"
 #import "KCGNotebook.h"
+#import "KCLocation.h"
 
-@interface KCGNote ()
+@import CoreLocation;
+
+@interface KCGNote ()<CLLocationManagerDelegate>
 
 // Private interface goes here.
-
+@property (nonatomic, strong) CLLocationManager *locationManager;
 @end
 
 @implementation KCGNote
+@synthesize locationManager=_locationManager;
 
 +(NSArray*)observableKeys{
-    return @[@"name", @"text", @"notebook",@"photo.imageData"];
+    return @[@"name", @"text", @"notebook",@"photo.imageData",@"location"];
 }
 
 
@@ -30,11 +34,36 @@
     return  note;
 }
 
+-(BOOL)hasLocation{
+    return nil != self.location;
+}
+
 #pragma mark - Life cycle
 -(void) awakeFromInsert{
     [super awakeFromInsert];
     // Se llama solo una vez
     [self setupKVO];
+    
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    
+    if ( (status == kCLAuthorizationStatusNotDetermined || status == kCLAuthorizationStatusAuthorizedAlways) && [CLLocationManager locationServicesEnabled]) {
+        // Tenemos localización
+        self.locationManager = [CLLocationManager new];
+        self.locationManager.delegate = self;
+        
+        if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+            [self.locationManager requestWhenInUseAuthorization];
+        }
+        
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        [self.locationManager startUpdatingLocation];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self zapLocationManager];
+        });
+    }else{
+        NSLog(@"No tengo permiso");
+    }
     
 }
 
@@ -81,9 +110,28 @@
 }
 
 
+#pragma mark - CLLocationManagerDelegate
 
+-(void)locationManager:(CLLocationManager *)manager
+    didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    
+    // lo paramos
+    [self zapLocationManager];
+    
+    if (!self.hasLocation) {
+        // Pillamos la última localización
+        CLLocation *loc = [locations lastObject];
+        self.location = [KCLocation locationWithCLLocation:loc forNote:self];
+    }else{
+        NSLog(@"No deberíamos llegar nunca");
+    }
+}
 
-
+-(void)zapLocationManager{
+    [self.locationManager stopUpdatingLocation];
+    self.locationManager.delegate = nil;
+    self.locationManager = nil;
+}
 
 
 

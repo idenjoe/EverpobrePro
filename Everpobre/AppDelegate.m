@@ -13,6 +13,7 @@
 #import "KCGNotebooksViewController.h"
 #import "UIViewController+Navigation.h"
 #import "Settngs.h"
+#import "KCLocation.h"
 
 @interface AppDelegate ()
 @property (strong, nonatomic) AGTCoreDataStack *model;
@@ -85,6 +86,9 @@
         [self.model zapAllData];
         [self createDummyData];
     }
+    
+    // Iniciamos el inspector del contexto
+    [self printContextState];
     
     // Autosave
     if (AUTO_SAVE) {
@@ -170,23 +174,28 @@
 }
     
     
+-(void) printContextState{
     
+    NSFetchRequest *req = [NSFetchRequest fetchRequestWithEntityName:[KCGNotebook entityName]];
+    NSUInteger numNotebooks = [[self.model executeFetchRequest:req errorBlock:nil] count];
     
+    req = [NSFetchRequest fetchRequestWithEntityName:[KCGNote entityName]];
+    NSUInteger numNotes = [[self.model executeFetchRequest:req errorBlock:nil] count];
     
+    req = [NSFetchRequest fetchRequestWithEntityName:[KCLocation entityName]];
+    NSUInteger numLocations = [[self.model executeFetchRequest:req errorBlock:nil] count];
     
+    printf("----------------------------------------------------\n");
+    printf("Total number of objects:    %lu\n", (unsigned long)self.model.context.registeredObjects.count);
+    printf("Number of notebooks:        %lu\n", (unsigned long)numNotebooks);
+    printf("Number of notes:            %lu\n", (unsigned long)numNotes);
+    printf("Number of locations:        %lu\n", (unsigned long)numLocations);
+    printf("----------------------------------------------------\n\n\n");
     
+    [self performSelector:@selector(printContextState)
+               withObject:nil
+               afterDelay:5];
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
+}
 
 @end

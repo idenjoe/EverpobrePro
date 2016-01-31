@@ -4,6 +4,8 @@
 
 @interface KCGNote : _KCGNote {}
 // Custom logic goes here.
+@property(nonatomic, readonly) BOOL hasLocation;
+
 
 +(instancetype)noteWithName:(NSString *) name
                    notebook: (KCGNotebook*) notebook

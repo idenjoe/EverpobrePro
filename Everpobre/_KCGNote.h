@@ -1,7 +1,7 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
 // Make changes to KCGNote.h instead.
 
-@import CoreData;
+#import <CoreData/CoreData.h>
 
 extern const struct KCGNoteAttributes {
 	__unsafe_unretained NSString *creationDate;
@@ -11,10 +11,12 @@ extern const struct KCGNoteAttributes {
 } KCGNoteAttributes;
 
 extern const struct KCGNoteRelationships {
+	__unsafe_unretained NSString *location;
 	__unsafe_unretained NSString *notebook;
 	__unsafe_unretained NSString *photo;
 } KCGNoteRelationships;
 
+@class KCLocation;
 @class KCGNotebook;
 @class KCGPhoto;
 
@@ -43,6 +45,10 @@ extern const struct KCGNoteRelationships {
 
 //- (BOOL)validateText:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) KCLocation *location;
+
+//- (BOOL)validateLocation:(id*)value_ error:(NSError**)error_;
+
 @property (nonatomic, strong) KCGNotebook *notebook;
 
 //- (BOOL)validateNotebook:(id*)value_ error:(NSError**)error_;
@@ -66,6 +72,9 @@ extern const struct KCGNoteRelationships {
 
 - (NSString*)primitiveText;
 - (void)setPrimitiveText:(NSString*)value;
+
+- (KCLocation*)primitiveLocation;
+- (void)setPrimitiveLocation:(KCLocation*)value;
 
 - (KCGNotebook*)primitiveNotebook;
 - (void)setPrimitiveNotebook:(KCGNotebook*)value;

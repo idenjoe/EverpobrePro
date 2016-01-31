@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73E6AD231C5E2FA900A049F1 /* _KCLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E6AD221C5E2FA900A049F1 /* _KCLocation.m */; };
+		73E6AD261C5E2FB200A049F1 /* KCLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E6AD251C5E2FB200A049F1 /* KCLocation.m */; };
 		ED37F8921C518762003DA142 /* KCGNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED37F8911C518762003DA142 /* KCGNotesViewController.m */; };
 		ED37F8961C519492003DA142 /* KCGNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED37F8941C519492003DA142 /* KCGNoteViewController.m */; };
 		ED37F8971C519492003DA142 /* KCGNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED37F8951C519492003DA142 /* KCGNoteViewController.xib */; };
@@ -42,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7362986B1C5E24EC00FABD9E /* Everpobre3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Everpobre3.xcdatamodel; sourceTree = "<group>"; };
+		73E6AD211C5E2FA900A049F1 /* _KCLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _KCLocation.h; sourceTree = "<group>"; };
+		73E6AD221C5E2FA900A049F1 /* _KCLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _KCLocation.m; sourceTree = "<group>"; };
+		73E6AD241C5E2FB200A049F1 /* KCLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLocation.h; sourceTree = "<group>"; };
+		73E6AD251C5E2FB200A049F1 /* KCLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCLocation.m; sourceTree = "<group>"; };
 		ED37F88F1C51782C003DA142 /* Settngs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settngs.h; sourceTree = "<group>"; };
 		ED37F8901C518762003DA142 /* KCGNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCGNotesViewController.h; sourceTree = "<group>"; };
 		ED37F8911C518762003DA142 /* KCGNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCGNotesViewController.m; sourceTree = "<group>"; };
@@ -172,6 +179,8 @@
 		ED9204721C485C170023E48D /* Machine */ = {
 			isa = PBXGroup;
 			children = (
+				73E6AD211C5E2FA900A049F1 /* _KCLocation.h */,
+				73E6AD221C5E2FA900A049F1 /* _KCLocation.m */,
 				ED9204601C485C070023E48D /* _KCGNote.h */,
 				ED9204611C485C070023E48D /* _KCGNote.m */,
 				ED9204621C485C070023E48D /* _KCGNotebook.h */,
@@ -185,6 +194,8 @@
 		ED9204731C485D090023E48D /* Human */ = {
 			isa = PBXGroup;
 			children = (
+				73E6AD241C5E2FB200A049F1 /* KCLocation.h */,
+				73E6AD251C5E2FB200A049F1 /* KCLocation.m */,
 				ED9204661C485C070023E48D /* KCGNote.h */,
 				ED9204671C485C070023E48D /* KCGNote.m */,
 				ED9204681C485C070023E48D /* KCGNotebook.h */,
@@ -333,11 +344,13 @@
 				EDE068371C4DA0DD00EAB461 /* KCGNotebooksViewController.m in Sources */,
 				ED9204351C483A1E0023E48D /* AppDelegate.m in Sources */,
 				ED92045F1C4840DD0023E48D /* Everpobre.xcdatamodeld in Sources */,
+				73E6AD231C5E2FA900A049F1 /* _KCLocation.m in Sources */,
 				ED37F8921C518762003DA142 /* KCGNotesViewController.m in Sources */,
 				ED92046D1C485C070023E48D /* _KCGNotebook.m in Sources */,
 				ED92046E1C485C070023E48D /* _KCGPhoto.m in Sources */,
 				ED9204711C485C070023E48D /* KCGPhoto.m in Sources */,
 				ED9204701C485C070023E48D /* KCGNotebook.m in Sources */,
+				73E6AD261C5E2FB200A049F1 /* KCLocation.m in Sources */,
 				ED92046C1C485C070023E48D /* _KCGNote.m in Sources */,
 				ED92045C1C483AAE0023E48D /* AGTCoreDataStack.m in Sources */,
 				ED9204321C483A1E0023E48D /* main.m in Sources */,
@@ -536,10 +549,11 @@
 		ED92045D1C4840DD0023E48D /* Everpobre.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				7362986B1C5E24EC00FABD9E /* Everpobre3.xcdatamodel */,
 				EDF05E611C52EDFA00F501A3 /* Everpobre2.xcdatamodel */,
 				ED92045E1C4840DD0023E48D /* Everpobre.xcdatamodel */,
 			);
-			currentVersion = EDF05E611C52EDFA00F501A3 /* Everpobre2.xcdatamodel */;
+			currentVersion = 7362986B1C5E24EC00FABD9E /* Everpobre3.xcdatamodel */;
 			path = Everpobre.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
